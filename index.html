@@ -929,9 +929,16 @@ footer a:hover{color:var(--ind2)}
 }
 .m h4{grid-area:name}
 .m small{grid-area:description;min-height:0}
-.m .ft{display:contents}
-.m .price{grid-area:price;justify-self:start;padding-top:5px}
-.m .qty{grid-area:controls;grid-row:1 / span 2}
+.m .ft{
+  display:flex;
+  grid-column:2;
+  grid-row:1 / span 2;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+}
+.m .price{justify-self:start;padding-top:0}
+.m .qty{grid-area:unset;grid-row:unset}
 .m .qty button{width:34px;height:34px}
 .gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;margin-top:30px}
 .gal img{display:block;width:100%;height:250px;object-fit:cover;object-position:center;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
